@@ -8,7 +8,11 @@
         android:minSdkVersion="14"
         android:targetSdkVersion="19" />
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
     <application
+        android:name="com.amirved.ribbit.RibbitApplication"
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
@@ -33,6 +37,14 @@
             android:label="@string/title_activity_sign_up"
             android:parentActivityName="com.amirved.ribbit.LoginActivity"
             android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.amirved.ribbit.EditFriendsActivity"
+            android:label="@string/title_activity_edit_friends"
+            android:parentActivityName="com.amirved.ribbit.MainActivity" android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.amirved.ribbit.MainActivity" />
         </activity>
     </application>
 
