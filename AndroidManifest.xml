@@ -10,6 +10,11 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
 
     <application
         android:name="com.amirved.ribbit.RibbitApplication"
@@ -41,6 +46,24 @@
         <activity
             android:name="com.amirved.ribbit.EditFriendsActivity"
             android:label="@string/title_activity_edit_friends"
+            android:parentActivityName="com.amirved.ribbit.MainActivity"
+            android:screenOrientation="portrait" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.amirved.ribbit.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.amirved.ribbit.RecipientsActivity"
+            android:label="@string/title_activity_recipients"
+            android:parentActivityName="com.amirved.ribbit.MainActivity"
+            android:screenOrientation="portrait" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.amirved.ribbit.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.amirved.ribbit.ViewImageActivity"
+            android:label="@string/title_activity_view_image"
             android:parentActivityName="com.amirved.ribbit.MainActivity" android:screenOrientation="portrait">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
